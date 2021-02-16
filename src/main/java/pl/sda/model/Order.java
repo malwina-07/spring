@@ -1,0 +1,26 @@
+package pl.sda.model;
+
+import lombok.*;
+
+import javax.persistence.*;
+import java.time.LocalDateTime;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Entity
+@Table(name = "orders")
+public class Order {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    private String productName;
+
+    private Integer amount;
+
+    private LocalDateTime createDate;
+
+
+}
